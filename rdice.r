@@ -66,11 +66,7 @@ dicechart <- function (die, num_dice, maxed, base, iter)
   dierolls = gendice(die, num_dice, maxed, base, iter)
   lowest = min(dierolls)
   highest = max(dierolls)
-  columns = c()
-  for (i in lowest:(highest+1))
-  {
-    columns = c(columns,i)
-  }
+  columns = (lowest:(highest+1))
   hist(dierolls, breaks = columns, freq = FALSE, right = FALSE)
 }
 
